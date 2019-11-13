@@ -4,8 +4,6 @@ export const getCards = state => state.cards;
 
 const getTagFilter = state => state.tagFilter;
 
-//export const getCardById = (state, id) => state.cards.find(el => el.id === id);
-
 export const getFilteredCardSelector = createSelector(
   getCards,
   getTagFilter,
