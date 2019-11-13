@@ -1,7 +1,6 @@
 import * as types from "./actionTypes";
 import { put, takeEvery } from "redux-saga/effects";
 import * as actions from "./actions";
-import * as selectors from "./selectors";
 import axios from "axios";
 
 const initialState = {
@@ -58,7 +57,6 @@ function* fetch() {
 
     const response = yield axios.get(url);
     if (response.status === 200) {
-      console.log(response.data);
       const cards = response.data.hits.map(el => ({
         imgUrl: el.previewURL,
         tags: el.tags.split(", "),

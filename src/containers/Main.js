@@ -16,7 +16,6 @@ class Main extends Component {
   };
 
   render() {
-    console.log("render main");
     return (
       <div className="main_container">
         <Header></Header>
